@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang=en>
+<head>
+    <style>
+        html,
+        body
+        {
+            height: 100%;
+            font: 1em/1.5 sans-serif;
+        }
+
+        body
+        {
+            margin: 0;
+        }
+
+        .ruler
+        {
+            position: relative;
+            margin: 1.5em auto 0;
+            border-top: black solid 0.11cm;
+            text-align: right;
+            font-size: 0.4cm;
+        }
+        .ruler::before,
+        .ruler::after
+        {
+            content: '';
+            position: absolute;
+            top: -0.22cm;
+            height: 0.33cm;
+            border-left: black solid 0.11cm;
+        }
+        .ruler::before
+        {
+            left: 0;
+            float: left;
+        }
+        .ruler::after
+        {
+            right: 0;
+            float: right;
+        }
+
+        body style
+        {
+            display: block;
+            font: 1em/1.5 monospace;
+        }
+
+        body
+        {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        main
+        {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <style>
+        .ruler { width: 1cm; }
+    </style>
+
+    <main>
+        <div class="ruler">1cm</div>
+    </main>
+</body>
