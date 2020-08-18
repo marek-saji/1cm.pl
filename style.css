@@ -1,0 +1,105 @@
+/* root */
+
+html,
+body
+{
+    height: 100%;
+    font: 1em/1.5 sans-serif;
+}
+
+body
+{
+    margin: 0;
+}
+
+/* base tags */
+
+abbr
+{
+    text-decoration: none;
+    border: none;
+}
+
+/* layout */
+
+body style
+{
+    display: block;
+    font: 1em/1.5 monospace;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+main
+{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer
+{
+    padding: 0 1em;
+}
+
+/* components */
+
+.ruler
+{
+    position: relative;
+    margin: 1.5em auto 0;
+    border-top: black solid 0.11cm;
+    text-align: right;
+    font-size: 0.4cm;
+    white-space: nowrap;
+}
+.ruler::before,
+.ruler::after
+{
+    content: '';
+    position: absolute;
+    top: -0.22cm;
+    height: 0.33cm;
+    border-left: black solid 0.11cm;
+}
+.ruler::before
+{
+    left: 0;
+    float: left;
+}
+.ruler::after
+{
+    right: 0;
+    float: right;
+}
+
+.footnoteLink
+{
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+}
+.footnoteLink:hover
+{
+    text-decoration: underline;
+}
+
+.footnote
+{
+    transition: all ease-in 200ms;
+}
+.footnote:not(:target)
+{
+    opacity: 0;
+}
+.footnote:target
+{
+    opacity: 1;
+    background-color: lightgoldenrodyellow;
+}
