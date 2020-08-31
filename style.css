@@ -90,10 +90,6 @@ footer
     text-decoration: underline;
 }
 
-.footnote
-{
-    transition: all ease-in 200ms;
-}
 .footnote:not(:target)
 {
     opacity: 0;
@@ -102,4 +98,5 @@ footer
 {
     opacity: 1;
     background-color: lightgoldenrodyellow;
+    transition: all ease-in 200ms;
 }
