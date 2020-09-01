@@ -28,4 +28,11 @@
             <a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS_pixel">CSS pixels</a>.
         </p>
     </footer>
+
+    <script>
+        if (navigator.serviceWorker && !navigator.serviceWorker.controller)
+        {
+            navigator.serviceWorker.register('serviceWorker.js');
+        }
+    </script>
 </body>
