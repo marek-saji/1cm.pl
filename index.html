@@ -15,6 +15,10 @@
         .ruler { width: 1cm; }
     </style>
 
+    <aside id=offlineMsg hidden class="message message--offline">
+        You are offline.
+    </aside>
+
     <main>
         <div class="ruler">
             1<abbr title="centimiter">cm</abbr><a class="footnoteLink" href="#css-cm">*</a>
@@ -29,8 +33,26 @@
         </p>
     </footer>
 
+    <script type="module">
+        const offlineMsg = document.getElementById('offlineMsg');
+        if ('onLine' in navigator)
+        {
+            offlineMsg.hidden = navigator.onLine;
+            window.addEventListener('offline', () => {
+                offlineMsg.hidden = false;
+            });
+            window.addEventListener('online', () => {
+                offlineMsg.hidden = true;
+            });
+        }
+    </script>
+
     <script>
-        if (navigator.serviceWorker && !navigator.serviceWorker.controller)
+        if (
+            navigator.serviceWorker
+            && !navigator.serviceWorker.controller
+            && window.location.hostname !== ''
+        )
         {
             navigator.serviceWorker.register('serviceWorker.js');
         }

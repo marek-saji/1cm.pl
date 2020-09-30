@@ -22,17 +22,17 @@ abbr
 
 /* layout */
 
-body style
-{
-    display: block;
-    font: 1em/1.5 monospace;
-}
-
 body
 {
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+body style
+{
+    display: block;
+    font: 1em/1.5 monospace;
 }
 
 main
@@ -99,4 +99,13 @@ footer
     opacity: 1;
     background-color: lightgoldenrodyellow;
     transition: all ease-in 200ms;
+}
+
+.message {
+    margin: 1em 0;
+    padding: 0.5em 1em;
+}
+.message--offline {
+    background-color: lightgoldenrodyellow;
+    color: black;
 }
