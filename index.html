@@ -15,9 +15,10 @@
         .ruler { width: 1cm; }
     </style>
 
-    <aside id=offlineMsg hidden class="message message--offline">
-        You are offline.
-    </aside>
+    <aside
+        id=offlineMsg hidden class="message message--offline"
+        data-content="You are offline."
+    ></aside>
 
     <main>
         <div class="ruler">
@@ -39,6 +40,7 @@
         {
             offlineMsg.hidden = navigator.onLine;
             window.addEventListener('offline', () => {
+                offlineMsg.textContent = offlineMsg.dataset.content;
                 offlineMsg.hidden = false;
             });
             window.addEventListener('online', () => {
