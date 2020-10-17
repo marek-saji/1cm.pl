@@ -5,5 +5,8 @@
     "name": "Marek ‘saji’ Augustynowicz",
     "email": "marek.aug@gmail.com"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "scripts": {
+    "dev": "npx browser-sync ."
+  }
 }
