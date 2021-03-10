@@ -100,12 +100,3 @@ footer
     background-color: lightgoldenrodyellow;
     transition: all ease-in 200ms;
 }
-
-.message {
-    margin: 1em 0;
-    padding: 0.5em 1em;
-}
-.message--offline {
-    background-color: lightgoldenrodyellow;
-    color: black;
-}
